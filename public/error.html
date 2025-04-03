@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Error</title>
+        <!-- This leading slash in the href makes it relative to the server file, not the URI -->
+        <link rel="stylesheet" href="/styles/style.css">
+    </head>
+    <body>
+        <h1>An Error Occurred</h1> 
+        <section> 
+            <p>When trying to load the requested resource there was an critical error.</p>
+            <p>The following was the reported error message from the server.</p>
+            <p>(Food for thought: would you want the details of this error shown on a production (live) server?)</p>
+        </section>
+        <section>
+            <h2>Error Traceback:</h2>
+            <!-- The pre tag treats the contents as a pre-formatted string -->
+            <pre>{error_message}</pre>
+        </section>
+    </body>
+</html>

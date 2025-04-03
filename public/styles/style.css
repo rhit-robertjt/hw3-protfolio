@@ -1,0 +1,17 @@
+body {
+    background-color: lightblue;
+}
+
+#list1 li {
+    text-decoration: none;
+}
+
+#list2 li {
+    text-decoration: line-through;
+}
+
+/* ul li:hover {
+    background-color: red;
+    color: white;
+    Goes with mouseover and mouseout 
+} */
