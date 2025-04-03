@@ -1,17 +1,65 @@
+/* Heml CitationL MDN docs for variables https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties */
+:root {
+    --main-bg-color: #AD1414;
+    --second-bg-color: #333;
+    --main-color: white;
+    --second-color: #F45DE7;
+}
+
 body {
-    background-color: lightblue;
+    background-color: var(--main-bg-color);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
 }
 
-#list1 li {
+h1, h2, h3, p {
+    color: var(--main-color);
+}
+
+.headNav, .footNav {
+    background-color: var(--second-bg-color);
+    overflow: hidden;
+    min-height: 50px;
+}
+
+/* Style the links inside the navigation bar */
+/* Help Citation: W3Schools on "making button looking links" https://www.w3schools.com/howto/howto_js_topnav.asp */
+.headNav a, .footNav a {
+    float: left;
+    color: var(--main-color);
+    text-align: center;
+    padding: 17px;
     text-decoration: none;
+    font-size: 17px;
 }
 
-#list2 li {
-    text-decoration: line-through;
+.headNav a:hover, .headNav a:hover { /* Different from most links, that I just want white */
+    background-color: var(--main-color);
 }
 
-/* ul li:hover {
-    background-color: red;
-    color: white;
-    Goes with mouseover and mouseout 
-} */
+.headNav a.active {
+    color: var(--main-bg-color);
+    background-color: var(--main-color);
+}
+
+a:visited, a:hover {
+    color: var(--second-color);
+}
+
+.footNav {
+    border-top: 1px solid black;
+}
+
+main {
+    flex: 1;
+    text-align: center;
+}
+
+/* Help Citation: StackOverflow helped with sections next to each other https://stackoverflow.com/questions/24964101/how-to-place-two-section-elements-next-to-each-other-using-css */
+#profilePic {
+    width:400px;
+    margin-left:30px;
+    float:left;
+}

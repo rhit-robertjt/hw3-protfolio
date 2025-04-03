@@ -9,8 +9,6 @@ import urllib.parse
 #added for tracing prints
 import traceback
 
-from dynamic_demo import *
-
 server_variables = {}
 server_variables["abc"] = 123
 
@@ -18,7 +16,7 @@ server_variables["abc"] = 123
 # It is a good idea to put your public files here and not your private files
 # Why might that be a good idea?
 # Fix #1: change to "./public"
-WEB_HOME = "./public"
+WEB_HOME = "./docs"
 
 
 #   1. Practice Debugging via the Python Debugger
@@ -136,9 +134,6 @@ def handle_special_routes(file_name: str, post_data=None):
     elif(file_name == "/template.html"):
         special_dict = {}
         special_dict["foo"] = "barrrrrrr"
-    elif(file_name == "/dynamic_demo"):
-        add_random_entry(server_variables)
-        special_response_body = generate_dynamic_response_body(server_variables)
         
     return file_name, special_response_body, special_dict
 
@@ -183,6 +178,8 @@ def get_content_type(file_extension: str) -> str:
         content_type = 'image/x-icon'
     elif(file_extension == "jpeg"):
         content_type = 'image/jpeg'
+    elif(file_extension == "jpg"):
+        content_type = 'image/jpg'
     elif(file_extension == "js"):
         content_type = 'text/javascript; charset=utf-8'
     elif(file_extension == "css"):
