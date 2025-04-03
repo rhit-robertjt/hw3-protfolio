@@ -62,14 +62,15 @@ a {
 /* Help Citation: StackOverflow helped with sections next to each other https://stackoverflow.com/questions/24964101/how-to-place-two-section-elements-next-to-each-other-using-css */
 #profilePic {
     width:400px;
-    margin-left:30px;
+    margin: 0px 50px;
     float:left;
 }
 
 .resumeMain {
     display: grid;
     flex: 1;
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(3, auto);
+    margin: 30px;
 }
 
 .portfolioMain {
@@ -79,7 +80,27 @@ a {
     padding: 30px 30px;
 }
 
-.timing {
-    float: right;
+#game {
+    text-align: left;
+}
+
+.nextTo {
+    display: flex;
+    justify-content: space-between;
     margin-right: 30px;
+}
+
+#school {
+    margin: 0px 30px;
+}
+
+.nextToImg {
+    display: flex;
+    justify-content: left;
+    padding: 0px 30px;
+    margin-right: 30px;
+}
+
+.rosieImg {
+    margin: 0px 5px;
 }
