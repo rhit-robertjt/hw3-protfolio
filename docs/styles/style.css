@@ -1,4 +1,5 @@
-/* Heml CitationL MDN docs for variables https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties. I chose to use variables in case I had to change them for contrast issues later. */
+/* Heml CitationL MDN docs for variables https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties. 
+I chose to use variables in case I had to change them for contrast issues later. */
 :root {
     --main-bg-color: #AD1414;
     --second-bg-color: #333;
@@ -7,6 +8,7 @@
     --link-color: #0BEAA0;
 }
 
+/* Required use of flex */
 body {
     background-color: var(--main-bg-color);
     display: flex;
@@ -16,7 +18,7 @@ body {
     color: var(--main-color);
 }
 
-.headNav, .footNav {
+.headNav, .footNav, button {
     background-color: var(--second-bg-color);
     overflow: hidden;
     min-height: 50px;
@@ -34,7 +36,20 @@ body {
     font-size: 17px;
 }
 
-.headNav a:hover, .footNav a:hover { /* Different from most links, that I just want white */
+button {
+    color: var(--main-color);
+    text-align: center;
+    padding: 17px;
+    text-decoration: none;
+    font-size: 17px;
+    border: none;
+}
+
+/* Different from most links, that I just want white */
+/* From here on, there are several overlapping class/inherited properities
+    that made me make a table to keep track of them. This was my way of
+    solving CSS overlap, OOP style. */
+.headNav a:hover, .footNav a:hover { 
     background-color: var(--main-color);
 }
 
@@ -60,14 +75,16 @@ a {
     text-align: center;
 }
 
-/* Help Citation: StackOverflow helped with sections next to each other https://stackoverflow.com/questions/24964101/how-to-place-two-section-elements-next-to-each-other-using-css */
+/* Help Citation: StackOverflow helped with sections next to each other https://stackoverflow.com/questions/24964101/how-to-place-two-section-elements-next-to-each-other-using-css 
+I think float is interesting but really situational. I looked into using it as my featured CSS but went with variables and overlapping/inherited styles instead, as I think both of them have more use. */
 #profilePic {
     max-width: 400px;
     width: 100%;
     margin: 0px 50px;
-    float:left;
+    float: left;
 }
 
+/* required use of grid */
 .resumeMain {
     display: grid;
     flex: 1;
@@ -82,9 +99,9 @@ a {
     padding: 30px 30px;
 }
 
-#game {
+/* #game {
     text-align: left;
-}
+} */
 
 .nextTo {
     display: flex;
@@ -103,6 +120,6 @@ a {
     margin-right: 30px;
 }
 
-.rosieImg {
-    margin: 0px 5px;
+.right-side {
+    float: right;
 }
