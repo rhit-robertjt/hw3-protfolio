@@ -1,4 +1,4 @@
-/* Heml CitationL MDN docs for variables https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties. 
+/* Help Citation: MDN docs for variables https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties. 
 I chose to use variables in case I had to change them for contrast issues later. */
 :root {
     --main-bg-color: #AD1414;

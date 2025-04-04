@@ -1,3 +1,5 @@
+/* Help Citation: MDN docs for CSS variables https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties. 
+I found out that you can change CSS variables from JS, so it was nice to make a "dark mode" even if it doesn't pass a11y standards */
 function main() {
   document.querySelector('#light-mode').addEventListener("click", () => {
     const root = document.documentElement;
